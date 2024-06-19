@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dxayumkpfowor"]
+
+[ext_resource type="PackedScene" uid="uid://dppmygdgset0m" path="res://card.tscn" id="1_myoi1"]
+[ext_resource type="Texture2D" uid="uid://bv2kfkj61x07c" path="res://Sprites/Blue_stars.png" id="2_m1d4c"]
+
+[node name="Card" instance=ExtResource("1_myoi1")]
+
+[node name="BlueStars" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_m1d4c")

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://0t5cunddjpu"]
+
+[ext_resource type="PackedScene" uid="uid://dppmygdgset0m" path="res://card.tscn" id="1_wkby6"]
+[ext_resource type="Texture2D" uid="uid://chj33nm5mobgu" path="res://Sprites/Brown_house.png" id="2_pgw2p"]
+
+[node name="Card" instance=ExtResource("1_wkby6")]
+
+[node name="BrownHouse" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_pgw2p")

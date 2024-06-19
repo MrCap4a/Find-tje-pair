@@ -1,0 +1,109 @@
+[gd_scene load_steps=6 format=3 uid="uid://cm1pqco0rp3fo"]
+
+[ext_resource type="Script" path="res://main_menu.gd" id="1_k1745"]
+[ext_resource type="Texture2D" uid="uid://dg4g2gfsf06h7" path="res://Sprites/Background_menu.png" id="1_muj5r"]
+[ext_resource type="Texture2D" uid="uid://cup5882l1ih2e" path="res://Buttons/Skip_.png" id="2_60uqf"]
+[ext_resource type="FontFile" uid="uid://6e5a2u5rsc3p" path="res://m5x7.ttf" id="3_125px"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_pe3ef"]
+font = ExtResource("3_125px")
+font_size = 72
+
+[node name="Main_menu" type="Node2D"]
+script = ExtResource("1_k1745")
+
+[node name="BackgroundMenu" type="Sprite2D" parent="."]
+position = Vector2(960, 540)
+scale = Vector2(0.99844, 0.841777)
+texture = ExtResource("1_muj5r")
+
+[node name="32x32Button" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 565.0
+offset_right = 1091.0
+offset_bottom = 672.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("2_60uqf")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="32x32Button"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 255.0
+offset_bottom = 106.0
+text = "32 cards
+"
+label_settings = SubResource("LabelSettings_pe3ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="16x16Button" type="Button" parent="."]
+offset_left = 837.0
+offset_top = 421.0
+offset_right = 1092.0
+offset_bottom = 528.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("2_60uqf")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="16x16Button"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 255.0
+offset_bottom = 106.0
+text = "16 cards"
+label_settings = SubResource("LabelSettings_pe3ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="8x8Button" type="Button" parent="."]
+offset_left = 838.0
+offset_top = 277.0
+offset_right = 1093.0
+offset_bottom = 384.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("2_60uqf")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="8x8Button"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 255.0
+offset_bottom = 106.0
+text = "8 cards
+"
+label_settings = SubResource("LabelSettings_pe3ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="ExitButton" type="Button" parent="."]
+offset_left = 836.0
+offset_top = 708.0
+offset_right = 1091.0
+offset_bottom = 815.0
+size_flags_horizontal = 4
+size_flags_vertical = 4
+icon = ExtResource("2_60uqf")
+metadata/_edit_group_ = true
+
+[node name="Label" type="Label" parent="ExitButton"]
+layout_mode = 0
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 255.0
+offset_bottom = 106.0
+text = "Exit"
+label_settings = SubResource("LabelSettings_pe3ef")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[connection signal="pressed" from="32x32Button" to="." method="_on_x_32_button_pressed"]
+[connection signal="pressed" from="16x16Button" to="." method="_on_x_16_button_pressed"]
+[connection signal="pressed" from="8x8Button" to="." method="_on_x_8_button_pressed"]
+[connection signal="pressed" from="ExitButton" to="." method="_on_exit_button_pressed"]

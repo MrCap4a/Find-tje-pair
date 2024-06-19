@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://xwlfdylutt6d"]
+
+[ext_resource type="PackedScene" uid="uid://dppmygdgset0m" path="res://card.tscn" id="1_e53cs"]
+[ext_resource type="Texture2D" uid="uid://bbynprlrfe7uk" path="res://Sprites/Violet_sun.png" id="2_p2n84"]
+
+[node name="Card" instance=ExtResource("1_e53cs")]
+
+[node name="VioletSun" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_p2n84")

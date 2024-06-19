@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://ce2kcmxcjrq2l"]
+
+[ext_resource type="PackedScene" uid="uid://dppmygdgset0m" path="res://card.tscn" id="1_hr5dr"]
+[ext_resource type="Texture2D" uid="uid://bpiu8dkachwic" path="res://Sprites/Red_rhomb.png" id="2_4isnu"]
+
+[node name="Card" instance=ExtResource("1_hr5dr")]
+
+[node name="RedRhomb" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_4isnu")

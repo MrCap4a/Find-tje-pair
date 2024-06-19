@@ -1,0 +1,18 @@
+[gd_scene load_steps=4 format=3 uid="uid://dppmygdgset0m"]
+
+[ext_resource type="Script" path="res://card.gd" id="1_r0ngm"]
+[ext_resource type="Texture2D" uid="uid://dlmoidta3ae8m" path="res://Sprites/Card_back.png" id="2_uk5tc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_240rt"]
+size = Vector2(240, 360)
+
+[node name="Card" type="StaticBody2D"]
+script = ExtResource("1_r0ngm")
+metadata/_edit_group_ = true
+
+[node name="Back" type="Sprite2D" parent="."]
+texture = ExtResource("2_uk5tc")
+
+[node name="Collision" type="CollisionShape2D" parent="."]
+visible = false
+shape = SubResource("RectangleShape2D_240rt")

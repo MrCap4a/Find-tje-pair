@@ -1,0 +1,195 @@
+[gd_scene load_steps=22 format=3 uid="uid://xvl3cmdu1qx"]
+
+[ext_resource type="Script" path="res://game32.gd" id="1_1edvp"]
+[ext_resource type="FontFile" uid="uid://6e5a2u5rsc3p" path="res://m5x7.ttf" id="2_p0xbn"]
+[ext_resource type="Texture2D" uid="uid://cekwao8wrdi76" path="res://Buttons/Home_Button.png" id="3_gowvp"]
+[ext_resource type="PackedScene" uid="uid://dre8skr3kywrn" path="res://Cards/Blue_house.tscn" id="4_rk11v"]
+[ext_resource type="PackedScene" uid="uid://xtff0xk6g05w" path="res://Cards/Green_sheet.tscn" id="5_wgvln"]
+[ext_resource type="PackedScene" uid="uid://ce2kcmxcjrq2l" path="res://Cards/Red_rhomb.tscn" id="6_bkaai"]
+[ext_resource type="PackedScene" uid="uid://d2jbwblqvgn46" path="res://Cards/Yellow_sun.tscn" id="7_pihh6"]
+[ext_resource type="PackedScene" uid="uid://bgq6xwdbkwo4l" path="res://Cards/Yellow_round.tscn" id="8_rxbfp"]
+[ext_resource type="PackedScene" uid="uid://xwlfdylutt6d" path="res://Cards/Violet_sun.tscn" id="9_ye5jt"]
+[ext_resource type="PackedScene" uid="uid://dekcamg30unkm" path="res://Cards/Orange_spiral.tscn" id="10_y0sv1"]
+[ext_resource type="PackedScene" uid="uid://dxayumkpfowor" path="res://Cards/Blue_stars.tscn" id="11_sjdja"]
+[ext_resource type="PackedScene" uid="uid://c16hw28euho00" path="res://Cards/Blue_symb.tscn" id="12_hb7nm"]
+[ext_resource type="PackedScene" uid="uid://0t5cunddjpu" path="res://Cards/Brown_house.tscn" id="13_2pibx"]
+[ext_resource type="PackedScene" uid="uid://bi2x8mj2vy6k5" path="res://Cards/Brown_sheet.tscn" id="14_4esvr"]
+[ext_resource type="PackedScene" uid="uid://cpskcd3wkt4xp" path="res://Cards/Green_spiral.tscn" id="15_fp6bq"]
+[ext_resource type="PackedScene" uid="uid://7jdi05mr1pe" path="res://Cards/Green_symb.tscn" id="16_jksnr"]
+[ext_resource type="PackedScene" uid="uid://bkp80ttsnj8gg" path="res://Cards/Orange_round.tscn" id="17_d78jr"]
+[ext_resource type="PackedScene" uid="uid://coxt3e0ov1374" path="res://Cards/Violet_rhomb.tscn" id="18_0qw2l"]
+[ext_resource type="PackedScene" uid="uid://chnehlhh58vr8" path="res://Cards/Yellow_stars.tscn" id="19_obk3x"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_oyerp"]
+font = ExtResource("2_p0xbn")
+font_size = 200
+
+[sub_resource type="LabelSettings" id="LabelSettings_pe8gx"]
+font = ExtResource("2_p0xbn")
+font_size = 200
+
+[node name="game32" type="Node2D"]
+script = ExtResource("1_1edvp")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(1, 0.67451, 1, 1)
+
+[node name="Score_label" type="Label" parent="."]
+offset_left = 1259.0
+offset_top = 111.0
+offset_right = 1870.0
+offset_bottom = 317.0
+text = "score:"
+label_settings = SubResource("LabelSettings_oyerp")
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Home_Button" type="Button" parent="."]
+offset_left = 1656.0
+offset_top = 816.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+icon = ExtResource("3_gowvp")
+
+[node name="Card" parent="." instance=ExtResource("4_rk11v")]
+position = Vector2(-539, 311)
+
+[node name="Card2" parent="." instance=ExtResource("4_rk11v")]
+position = Vector2(-830, 310)
+
+[node name="Card3" parent="." instance=ExtResource("5_wgvln")]
+position = Vector2(-717, 748)
+
+[node name="Card4" parent="." instance=ExtResource("5_wgvln")]
+position = Vector2(-473, 747)
+
+[node name="Card5" parent="." instance=ExtResource("6_bkaai")]
+position = Vector2(-1135, 311)
+
+[node name="Card6" parent="." instance=ExtResource("6_bkaai")]
+position = Vector2(-232, 310)
+
+[node name="Card7" parent="." instance=ExtResource("7_pihh6")]
+position = Vector2(-962, 745)
+
+[node name="Card8" parent="." instance=ExtResource("7_pihh6")]
+position = Vector2(-227, 740)
+
+[node name="Card9" parent="." instance=ExtResource("8_rxbfp")]
+position = Vector2(-1425, 318)
+
+[node name="Card10" parent="." instance=ExtResource("8_rxbfp")]
+position = Vector2(-1208, 745)
+
+[node name="Card11" parent="." instance=ExtResource("9_ye5jt")]
+position = Vector2(-1458, 740)
+
+[node name="Card12" parent="." instance=ExtResource("9_ye5jt")]
+position = Vector2(-1710, 318)
+
+[node name="Card13" parent="." instance=ExtResource("10_y0sv1")]
+position = Vector2(-1711, 734)
+
+[node name="Card14" parent="." instance=ExtResource("10_y0sv1")]
+position = Vector2(-2015, 299)
+
+[node name="Card15" parent="." instance=ExtResource("11_sjdja")]
+position = Vector2(-1961, 739)
+
+[node name="Card16" parent="." instance=ExtResource("11_sjdja")]
+position = Vector2(-2214, 742)
+
+[node name="Won_label" type="Label" parent="."]
+visible = false
+offset_left = 1261.0
+offset_top = 492.0
+offset_right = 1872.0
+offset_bottom = 698.0
+text = "You won!"
+label_settings = SubResource("LabelSettings_pe8gx")
+
+[node name="Card17" parent="." instance=ExtResource("12_hb7nm")]
+position = Vector2(-2311, -138)
+
+[node name="Card18" parent="." instance=ExtResource("12_hb7nm")]
+position = Vector2(-2306, -567)
+
+[node name="Card19" parent="." instance=ExtResource("13_2pibx")]
+position = Vector2(-2018, -133)
+
+[node name="Card20" parent="." instance=ExtResource("13_2pibx")]
+position = Vector2(-2008, -562)
+
+[node name="Card21" parent="." instance=ExtResource("14_4esvr")]
+position = Vector2(-1706, -138)
+
+[node name="Card22" parent="." instance=ExtResource("14_4esvr")]
+position = Vector2(-1711, -552)
+
+[node name="Card23" parent="." instance=ExtResource("15_fp6bq")]
+position = Vector2(-1419, -138)
+
+[node name="Card24" parent="." instance=ExtResource("15_fp6bq")]
+position = Vector2(-1419, -546)
+
+[node name="Card25" parent="." instance=ExtResource("16_jksnr")]
+position = Vector2(-1126, -123)
+
+[node name="Card26" parent="." instance=ExtResource("16_jksnr")]
+position = Vector2(-1131, -546)
+
+[node name="Card27" parent="." instance=ExtResource("17_d78jr")]
+position = Vector2(-819, -123)
+
+[node name="Card28" parent="." instance=ExtResource("17_d78jr")]
+position = Vector2(-824, -536)
+
+[node name="Card29" parent="." instance=ExtResource("18_0qw2l")]
+position = Vector2(-532, -118)
+
+[node name="Card30" parent="." instance=ExtResource("18_0qw2l")]
+position = Vector2(-532, -521)
+
+[node name="Card31" parent="." instance=ExtResource("19_obk3x")]
+position = Vector2(-250, -118)
+
+[node name="Card32" parent="." instance=ExtResource("19_obk3x")]
+position = Vector2(-255, -521)
+
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Home_Button" to="." method="_on_home_button_pressed"]
+[connection signal="open" from="Card" to="." method="_on_card_open"]
+[connection signal="open" from="Card2" to="." method="_on_card_2_open"]
+[connection signal="open" from="Card3" to="." method="_on_card_3_open"]
+[connection signal="open" from="Card4" to="." method="_on_card_4_open"]
+[connection signal="open" from="Card5" to="." method="_on_card_5_open"]
+[connection signal="open" from="Card6" to="." method="_on_card_6_open"]
+[connection signal="open" from="Card7" to="." method="_on_card_7_open"]
+[connection signal="open" from="Card8" to="." method="_on_card_8_open"]
+[connection signal="open" from="Card9" to="." method="_on_card_9_open"]
+[connection signal="open" from="Card10" to="." method="_on_card_10_open"]
+[connection signal="open" from="Card11" to="." method="_on_card_11_open"]
+[connection signal="open" from="Card12" to="." method="_on_card_12_open"]
+[connection signal="open" from="Card13" to="." method="_on_card_13_open"]
+[connection signal="open" from="Card14" to="." method="_on_card_14_open"]
+[connection signal="open" from="Card15" to="." method="_on_card_15_open"]
+[connection signal="open" from="Card16" to="." method="_on_card_16_open"]
+[connection signal="open" from="Card17" to="." method="_on_card_17_open"]
+[connection signal="open" from="Card18" to="." method="_on_card_18_open"]
+[connection signal="open" from="Card19" to="." method="_on_card_19_open"]
+[connection signal="open" from="Card20" to="." method="_on_card_20_open"]
+[connection signal="open" from="Card21" to="." method="_on_card_21_open"]
+[connection signal="open" from="Card22" to="." method="_on_card_22_open"]
+[connection signal="open" from="Card23" to="." method="_on_card_23_open"]
+[connection signal="open" from="Card24" to="." method="_on_card_24_open"]
+[connection signal="open" from="Card25" to="." method="_on_card_25_open"]
+[connection signal="open" from="Card26" to="." method="_on_card_26_open"]
+[connection signal="open" from="Card27" to="." method="_on_card_27_open"]
+[connection signal="open" from="Card28" to="." method="_on_card_28_open"]
+[connection signal="open" from="Card29" to="." method="_on_card_29_open"]
+[connection signal="open" from="Card30" to="." method="_on_card_30_open"]
+[connection signal="open" from="Card31" to="." method="_on_card_31_open"]
+[connection signal="open" from="Card32" to="." method="_on_card_32_open"]

@@ -1,0 +1,83 @@
+[gd_scene load_steps=9 format=3 uid="uid://b044sjr5dvyc4"]
+
+[ext_resource type="Script" path="res://game8.gd" id="1_kjoil"]
+[ext_resource type="PackedScene" uid="uid://dre8skr3kywrn" path="res://Cards/Blue_house.tscn" id="2_743jd"]
+[ext_resource type="PackedScene" uid="uid://xtff0xk6g05w" path="res://Cards/Green_sheet.tscn" id="3_iybiq"]
+[ext_resource type="PackedScene" uid="uid://ce2kcmxcjrq2l" path="res://Cards/Red_rhomb.tscn" id="4_s04is"]
+[ext_resource type="PackedScene" uid="uid://d2jbwblqvgn46" path="res://Cards/Yellow_sun.tscn" id="5_jom7c"]
+[ext_resource type="FontFile" uid="uid://6e5a2u5rsc3p" path="res://m5x7.ttf" id="6_8g7f7"]
+[ext_resource type="Texture2D" uid="uid://cekwao8wrdi76" path="res://Buttons/Home_Button.png" id="7_f4rvo"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_otp0g"]
+font = ExtResource("6_8g7f7")
+font_size = 200
+
+[node name="Game" type="Node2D"]
+script = ExtResource("1_kjoil")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_right = 1920.0
+offset_bottom = 1080.0
+color = Color(1, 0.67451, 1, 1)
+
+[node name="Card" parent="." instance=ExtResource("2_743jd")]
+position = Vector2(773, 321)
+
+[node name="Card2" parent="." instance=ExtResource("2_743jd")]
+position = Vector2(482, 320)
+
+[node name="Card3" parent="." instance=ExtResource("3_iybiq")]
+position = Vector2(479, 778)
+
+[node name="Card4" parent="." instance=ExtResource("3_iybiq")]
+position = Vector2(763, 772)
+
+[node name="Card5" parent="." instance=ExtResource("4_s04is")]
+position = Vector2(177, 321)
+
+[node name="Card6" parent="." instance=ExtResource("4_s04is")]
+position = Vector2(1080, 320)
+
+[node name="Card7" parent="." instance=ExtResource("5_jom7c")]
+position = Vector2(189, 780)
+
+[node name="Card8" parent="." instance=ExtResource("5_jom7c")]
+position = Vector2(1080, 770)
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
+
+[node name="Won_label" type="Label" parent="."]
+visible = false
+offset_left = 1261.0
+offset_top = 492.0
+offset_right = 1872.0
+offset_bottom = 698.0
+text = "You won!"
+label_settings = SubResource("LabelSettings_otp0g")
+
+[node name="Score_label" type="Label" parent="."]
+offset_left = 1259.0
+offset_top = 111.0
+offset_right = 1870.0
+offset_bottom = 317.0
+text = "score:"
+label_settings = SubResource("LabelSettings_otp0g")
+
+[node name="Home_Button" type="Button" parent="."]
+offset_left = 1656.0
+offset_top = 816.0
+offset_right = 1920.0
+offset_bottom = 1080.0
+icon = ExtResource("7_f4rvo")
+
+[connection signal="open" from="Card" to="." method="_on_card_open"]
+[connection signal="open" from="Card2" to="." method="_on_card_2_open"]
+[connection signal="open" from="Card3" to="." method="_on_card_3_open"]
+[connection signal="open" from="Card4" to="." method="_on_card_4_open"]
+[connection signal="open" from="Card5" to="." method="_on_card_5_open"]
+[connection signal="open" from="Card6" to="." method="_on_card_6_open"]
+[connection signal="open" from="Card7" to="." method="_on_card_7_open"]
+[connection signal="open" from="Card8" to="." method="_on_card_8_open"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]
+[connection signal="pressed" from="Home_Button" to="." method="_on_home_button_pressed"]

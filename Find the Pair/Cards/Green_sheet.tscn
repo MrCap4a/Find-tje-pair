@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://xtff0xk6g05w"]
+
+[ext_resource type="PackedScene" uid="uid://dppmygdgset0m" path="res://card.tscn" id="1_kkq8h"]
+[ext_resource type="Texture2D" uid="uid://dyll5vetcdrtb" path="res://Sprites/Green_sheet.png" id="2_o0q6q"]
+
+[node name="Card" instance=ExtResource("1_kkq8h")]
+
+[node name="GreenSheet" type="Sprite2D" parent="." index="0"]
+texture = ExtResource("2_o0q6q")
